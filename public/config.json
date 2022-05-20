@@ -1,0 +1,60 @@
+{
+  "name": "",
+  "id": null,
+  "key": "REST1",
+  "type": "rest",
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        { "contactKey": "{{Contact.Key}}" },
+        { "First Name": "{{Contact.Attribute.JBCustomActivity.FirstName}}"},
+        { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
+      ],
+      "outArguments": [
+            { "offer": "" }
+      ],
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
+            "body": "", 
+            "header": "", 
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "publish": {
+      "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
+            "verb": "POST",
+            "body": "", 
+            "useJwt": false      
+    }
+  },
+  "metaData": {
+    "icon": "LINEアイコン.png",
+    "category": "message",
+    "iconSmall": null,
+    "isConfigured": true
+  },
+  "editable": true,
+  "outcomes": [
+    {
+      "next": "WAITBYDURATION-1"
+    }
+  ],
+  "schema": {
+        "arguments": {
+            "execute": {
+                "outArguments": [
+                    {
+                        "offer": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+  "errors": []
+}

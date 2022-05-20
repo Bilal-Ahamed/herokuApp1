@@ -1,10 +1,7 @@
 const express = require('express')
-
 const app = express()
+var port = process.env.PORT || 3000
 
-app.get('/',(req, res)=>{
-    console.log('hi')
-    res.json({'message':'json'})
-})
+app.use( express.static('public') )
 
-app.listen(3000)
+app.listen( port, () => console.log( `App listening on port ${port}!`) )
