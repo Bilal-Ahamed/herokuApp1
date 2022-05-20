@@ -7,11 +7,11 @@
     "execute": {
       "inArguments": [
         { "contactKey": "{{Contact.Key}}" },
-        { "First Name": "{{Contact.Attribute.JBCustomActivity.FirstName}}"},
-        { "Last Name": "{{Contact.Attribute.JBCustomActivity.LastName}}"}
+        { "First Name": "{{Contact.Attribute.CustomJbData.FirstName}}"},
+        { "Last Name": "{{Contact.Attribute.CustomJbData.LastName}}"}
       ],
       "outArguments": [
-            { "offer": "" }
+            { "offer": "Hello Bilal" }
       ],
       "url": "https://cgl5og4fm8.execute-api.us-east-2.amazonaws.com/sfmc/nbo",
             "body": "", 
